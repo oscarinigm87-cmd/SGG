@@ -1,96 +1,363 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SGG — Simplify. Grow. Go. | Business & Technology Consulting</title>
-<meta name="description" content="SGG helps companies simplify operations, maximize ERP value and turn technology into measurable business results.">
-<meta name="theme-color" content="#06132d"><link rel="icon" href="assets/sgg-mark.svg">
-<link rel="stylesheet" href="styles.css">
-</head><body>
-<header class="topbar"><div class="container" style="display:flex;align-items:center;width:100%">
-<a class="brand" href="#home"><img src="assets/sgg-mark.svg" alt="SGG"><b>SGG</b></a>
-<nav class="nav"><a href="#home" data-k="navHome"></a><a href="#services" data-k="navServices"></a><a href="#health" data-k="navHealth"></a><a href="#ai">AI</a><a href="#industries" data-k="navIndustries"></a><a href="#about" data-k="navAbout"></a><a href="#insights" data-k="navInsights"></a><a class="pill" href="#contact" data-k="talk"></a></nav>
-<button class="lang" id="lang">ES</button><button class="menu" id="menu">☰</button></div></header>
-<div class="mobile-panel" id="mobilePanel"></div>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SGG — Simplify. Grow. Go. | Consultoría B2B y Tecnología</title>
+  <meta name="description" content="SGG ayuda a las empresas a simplificar operaciones, maximizar el valor de su ERP y aplicar IA.">
+  <meta name="theme-color" content="#06132d">
+  
+  <!-- Tailwind CSS via CDN (Para despliegue inmediato sin terminal) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { navy: '#06132d', blue: '#2563eb', accent: '#38bdf8' } },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+    .glass-card:hover { border-color: rgba(56, 189, 248, 0.3); background: rgba(255, 255, 255, 0.05); }
+  </style>
+</head>
+<body class="bg-brand-navy text-slate-50 antialiased selection:bg-brand-blue selection:text-white">
 
-<main id="home">
-<section class="hero"><div class="hero-orbit"></div><div class="hero-scan"></div><div class="floating-card"><small>SGG DIGITAL</small><strong>Business + Technology</strong><span>ERP · AI · Integration · Data</span></div><div class="container">
-<div class="eyebrow" data-k="heroEy"></div><h1 data-k="heroTitle"></h1><p class="hero-copy" data-k="heroP"></p>
-<div class="actions"><a class="btn primary" href="#contact" data-k="heroCta"></a><a class="btn secondary" href="#health" data-k="heroSec"></a></div>
-<div class="proofline"><span data-k="proof1"></span><span data-k="proof2"></span><span data-k="proof3"></span><span data-k="proof4"></span></div>
-</div></section>
+  <!-- ==================== HEADER ==================== -->
+  <header class="fixed top-0 w-full bg-brand-navy/90 backdrop-blur-md z-50 border-b border-white/10 transition-all">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-2 font-black text-2xl tracking-tighter">
+        SGG<span class="text-brand-accent text-3xl leading-none">.</span>
+      </a>
+      <nav class="hidden lg:flex gap-8 text-sm font-medium text-slate-300 items-center">
+        <a href="#problem" class="hover:text-white transition-colors">Enfoque</a>
+        <a href="#ai" class="hover:text-white transition-colors">IA</a>
+        <a href="#services" class="hover:text-white transition-colors">Servicios</a>
+        <a href="#health" class="hover:text-white transition-colors">Auditoría ERP</a>
+        <a href="#industries" class="hover:text-white transition-colors">Industrias</a>
+        <a href="#contact" class="px-5 py-2.5 bg-brand-blue text-white rounded-lg hover:bg-blue-600 transition-all shadow-lg shadow-brand-blue/25">Hablemos</a>
+      </nav>
+      <!-- Menú móvil (Icono) -->
+      <button class="lg:hidden text-white p-2">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+  </header>
 
-<section class="section problem"><div class="container">
-<div class="kicker" data-k="problemK"></div><div class="split"><div><h2 data-k="problemTitle"></h2></div><p class="lead" data-k="problemP"></p></div>
-<div class="problem-grid">
-<article class="problem-card"><div class="num">01</div><h3 data-k="p1"></h3><p data-k="p1p"></p></article>
-<article class="problem-card"><div class="num">02</div><h3 data-k="p2"></h3><p data-k="p2p"></p></article>
-<article class="problem-card"><div class="num">03</div><h3 data-k="p3"></h3><p data-k="p3p"></p></article>
-<article class="problem-card"><div class="num">04</div><h3 data-k="p4"></h3><p data-k="p4p"></p></article>
-</div>
-<div class="visual-strip">
-<div class="visual-tile"><b>ERP</b><span>Make your core systems work harder.</span></div>
-<div class="visual-tile"><b>PROCESS</b><span>Remove friction and simplify the work.</span></div>
-<div class="visual-tile"><b>DATA</b><span>Turn information into better decisions.</span></div>
-<div class="visual-tile"><b>AI</b><span>Move intelligence into daily operations.</span></div>
-</div></div></section>
+  <main id="home">
+    
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="relative min-h-screen flex items-center pt-24 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-brand-navy to-brand-navy">
+      <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 shadow-inner">
+          <span class="flex h-2 w-2 rounded-full bg-brand-accent animate-pulse"></span>
+          <span class="text-xs font-bold tracking-widest text-slate-300 uppercase">SGG Digital</span>
+        </div>
+        
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-400 max-w-5xl mb-8 leading-tight">
+          Simplifica.<br><span class="text-brand-blue">Crece.</span> Avanza.
+        </h1>
+        
+        <p class="text-lg md:text-xl text-slate-400 max-w-2xl mb-12 font-light">
+          Ayudamos a las empresas a simplificar sus operaciones, maximizar el valor de su ERP y convertir la tecnología en resultados medibles.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          <a href="#contact" class="flex items-center justify-center px-8 py-4 rounded-xl bg-brand-blue text-white font-semibold hover:bg-blue-600 transition-all shadow-lg shadow-brand-blue/25 text-lg">
+            Transforma tu negocio hoy
+          </a>
+          <a href="#health" class="flex items-center justify-center px-8 py-4 rounded-xl glass-card text-white font-semibold transition-all text-lg border border-white/10">
+            Diagnóstico ERP gratuito
+          </a>
+        </div>
+      </div>
+    </section>
 
-<section class="section ai-section" id="ai"><div class="container"><div class="ai-layout">
-<div>
-<div class="kicker" data-ai="k"></div>
-<h2 data-ai="title"></h2>
-<p class="lead" data-ai="p"></p>
-<div class="ai-services">
-<div class="ai-service"><b data-ai="c1"></b><p data-ai="c1p"></p></div>
-<div class="ai-service"><b data-ai="c2"></b><p data-ai="c2p"></p></div>
-<div class="ai-service"><b data-ai="c3"></b><p data-ai="c3p"></p></div>
-<div class="ai-service"><b data-ai="c4"></b><p data-ai="c4p"></p></div>
-</div>
-<a class="btn primary" href="#contact" style="margin-top:25px" data-ai="cta"></a>
-</div>
-<div class="ai-visual">
-<div class="ai-ring r1"></div><div class="ai-ring r2"></div><div class="ai-ring r3"></div><div class="ai-core"></div>
-<div class="ai-node n1" data-ai="node1"></div><div class="ai-node n2" data-ai="node2"></div><div class="ai-node n3" data-ai="node3"></div><div class="ai-node n4" data-ai="node4"></div>
-</div>
-</div></div></section>
+    <!-- ==================== THE PROBLEM SECTION ==================== -->
+    <section id="problem" class="py-24 bg-slate-950">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-16">
+          <p class="text-brand-accent font-semibold tracking-wide uppercase mb-3">El Desafío Actual</p>
+          <h2 class="text-4xl md:text-5xl font-bold max-w-3xl leading-tight">La complejidad tecnológica está frenando tu crecimiento.</h2>
+        </div>
 
-<section class="section approach"><div class="container"><div class="kicker" data-k="appK"></div><div class="split"><h2 data-k="appTitle"></h2><p class="lead" data-k="appP"></p></div>
-<div class="flow">
-<article class="flow-item"><b data-k="a1"></b><h3 data-k="a1t"></h3><p data-k="a1p"></p></article>
-<article class="flow-item"><b data-k="a2"></b><h3 data-k="a2t"></h3><p data-k="a2p"></p></article>
-<article class="flow-item"><b data-k="a3"></b><h3 data-k="a3t"></h3><p data-k="a3p"></p></article>
-</div></div></section>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <article class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2">
+            <div class="text-4xl font-black text-white/10 mb-4">01</div>
+            <h3 class="text-xl font-bold mb-3">Sistemas Desconectados</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Tu ERP no habla con el resto de tus herramientas, generando silos de información y trabajo manual duplicado.</p>
+          </article>
+          <article class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2">
+            <div class="text-4xl font-black text-white/10 mb-4">02</div>
+            <h3 class="text-xl font-bold mb-3">Procesos Rígidos</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Flujos de trabajo diseñados hace años que ya no responden a la velocidad y flexibilidad que exige el mercado actual.</p>
+          </article>
+          <article class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2">
+            <div class="text-4xl font-black text-white/10 mb-4">03</div>
+            <h3 class="text-xl font-bold mb-3">Datos Ciegos</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Tienes terabytes de información almacenada, pero ninguna visibilidad en tiempo real para tomar decisiones estratégicas.</p>
+          </article>
+          <article class="glass-card p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2">
+            <div class="text-4xl font-black text-white/10 mb-4">04</div>
+            <h3 class="text-xl font-bold mb-3">Adopción Nula de IA</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">La competencia automatiza tareas con Inteligencia Artificial mientras tu equipo sigue operando con hojas de cálculo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section class="section services" id="services"><div class="container"><div class="kicker" data-k="svcK"></div><h2 data-k="svcTitle"></h2><p class="lead" style="color:#b9c9df" data-k="svcP"></p>
-<div class="service-grid">
-<article class="service"><div class="tag" data-k="s1"></div><h3 data-k="s1t"></h3><p data-k="s1p"></p><ul id="s1list"></ul></article>
-<article class="service"><div class="tag" data-k="s2"></div><h3 data-k="s2t"></h3><p data-k="s2p"></p><ul id="s2list"></ul></article>
-<article class="service"><div class="tag" data-k="s3"></div><h3 data-k="s3t"></h3><p data-k="s3p"></p><ul id="s3list"></ul></article>
-</div></div></section>
+    <!-- ==================== AI SECTION ==================== -->
+    <section id="ai" class="py-24 bg-brand-navy border-y border-white/5 relative overflow-hidden">
+      <!-- Glow effect -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-blue/20 rounded-full blur-[120px] pointer-events-none"></div>
+      
+      <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+        <div>
+          <p class="text-brand-accent font-semibold tracking-wide uppercase mb-3">IA Operacional</p>
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Movemos la inteligencia a tus operaciones diarias.</h2>
+          <p class="text-slate-400 text-lg mb-10">No vendemos conceptos futuristas. Implementamos modelos de IA pragmáticos que optimizan inventarios, predicen demanda y automatizan tu ERP.</p>
+          
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-brand-blue/20 flex items-center justify-center text-brand-blue font-bold">✓</div>
+              <div>
+                <b class="text-lg block mb-1">Automatización Robótica (RPA)</b>
+                <p class="text-slate-400 text-sm">Elimina la carga de datos manual en sistemas heredados.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-brand-blue/20 flex items-center justify-center text-brand-blue font-bold">✓</div>
+              <div>
+                <b class="text-lg block mb-1">Analítica Predictiva</b>
+                <p class="text-slate-400 text-sm">Anticipa rupturas de stock y optimiza la cadena de suministro.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="inline-block mt-10 px-8 py-3 rounded-lg bg-white text-brand-navy font-bold hover:bg-slate-200 transition-colors">Inyectar IA en mi negocio</a>
+        </div>
+        
+        <!-- Elemento visual abstracto de IA -->
+        <div class="relative h-[400px] flex items-center justify-center">
+          <div class="absolute inset-0 border border-white/10 rounded-full animate-[spin_20s_linear_infinite]"></div>
+          <div class="absolute inset-8 border border-brand-blue/30 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
+          <div class="w-32 h-32 bg-gradient-to-tr from-brand-blue to-brand-accent rounded-full blur-md animate-pulse"></div>
+        </div>
+      </div>
+    </section>
 
-<section class="section health" id="health"><div class="container"><div class="kicker" data-k="healthK"></div><div class="health-box">
-<div><h2 data-k="healthTitle"></h2><p class="lead" data-k="healthP"></p><a class="btn" style="background:var(--navy);color:#fff;margin-top:15px" href="erp-health-check.html" data-k="healthBtn"></a></div>
-<div class="roadmap"><h3 data-k="roadTitle"></h3><p data-k="roadP"></p><div class="stage"><b>01</b><span data-k="r1"></span></div><div class="stage"><b>02</b><span data-k="r2"></span></div><div class="stage"><b>03</b><span data-k="r3"></span></div><div class="stage"><b>04</b><span data-k="r4"></span></div></div>
-</div></div></section>
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section id="services" class="py-24 bg-slate-950">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <p class="text-brand-accent font-semibold tracking-wide uppercase mb-3">Capacidades Core</p>
+          <h2 class="text-4xl font-bold mb-4">Nuestros Servicios Estratégicos</h2>
+          <p class="text-slate-400">Soluciones de principio a fin, desde la arquitectura hasta la ejecución y soporte continuo.</p>
+        </div>
 
-<section class="section industries" id="industries"><div class="container"><div class="kicker" data-k="indK"></div><div class="split"><h2 data-k="indTitle"></h2><p class="lead" data-k="indP"></p></div>
-<div class="industry-grid">
-<article class="industry"><h3 data-k="i1"></h3><p data-k="i1p"></p></article><article class="industry"><h3 data-k="i2"></h3><p data-k="i2p"></p></article><article class="industry"><h3 data-k="i3"></h3><p data-k="i3p"></p></article><article class="industry"><h3 data-k="i4"></h3><p data-k="i4p"></p></article><article class="industry"><h3 data-k="i5"></h3><p data-k="i5p"></p></article><article class="industry"><h3 data-k="i6"></h3><p data-k="i6p"></p></article><article class="industry"><h3 data-k="i7"></h3><p data-k="i7p"></p></article><article class="industry"><h3 data-k="i8"></h3><p data-k="i8p"></p></article>
-</div></div></section>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Servicio 1 -->
+          <article class="glass-card p-8 rounded-2xl border-t-4 border-t-brand-blue">
+            <h3 class="text-2xl font-bold mb-4">Optimización ERP</h3>
+            <p class="text-slate-400 mb-6 min-h-[80px]">Hacemos que tus sistemas centrales trabajen para ti, no al revés. SAP, Oracle, Microsoft.</p>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li class="flex items-center gap-2"><span class="text-brand-accent">→</span> Implementación y Rollout</li>
+              <li class="flex items-center gap-2"><span class="text-brand-accent">→</span> Migración a la Nube</li>
+              <li class="flex items-center gap-2"><span class="text-brand-accent">→</span> Mantenimiento Evolutivo (AMS)</li>
+            </ul>
+          </article>
+          <!-- Servicio 2 -->
+          <article class="glass-card p-8 rounded-2xl border-t-4 border-t-brand-accent">
+            <h3 class="text-2xl font-bold mb-4">Estrategia de Datos</h3>
+            <p class="text-slate-400 mb-6 min-h-[80px]">Convertimos información fragmentada en cuadros de mando financieros y operativos unificados.</p>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li class="flex items-center gap-2"><span class="text-brand-accent">→</span> Data Lakes & Warehouses</li>
+              <li class="flex items-center gap-2"><span class="text-brand-accent">→</span> Business Intelligence (BI)</li>
+              <li class="flex items-center gap-2"><span class="text-brand-accent">→</span> Limpieza y Gobierno de Datos</li>
+            </ul>
+          </article>
+          <!-- Servicio 3 -->
+          <article class="glass-card p-8 rounded-2xl border-t-4 border-t-purple-500">
+            <h3 class="text-2xl font-bold mb-4">Integración Digital</h3>
+            <p class="text-slate-400 mb-6 min-h-[80px]">Conectamos tu ecosistema completo mediante arquitecturas API modernas y ágiles.</p>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li class="flex items-center gap-2"><span class="text-brand-accent">→</span> Arquitectura de Microservicios</li>
+              <li class="flex items-center gap-2"><span class="text-brand-accent">→</span> Conectores B2B/EDI</li>
+              <li class="flex items-center gap-2"><span class="text-brand-accent">→</span> Plataformas Omnicanal</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<section class="section about" id="about"><div class="container"><div class="kicker" data-k="aboutK"></div><div class="about-box"><div><h2 data-k="aboutTitle"></h2><p data-k="aboutP"></p></div><div class="quote" data-k="quote"></div></div>
-<div class="principles"><div class="principle"><b data-k="pr1"></b><p data-k="pr1p"></p></div><div class="principle"><b data-k="pr2"></b><p data-k="pr2p"></p></div><div class="principle"><b data-k="pr3"></b><p data-k="pr3p"></p></div><div class="principle"><b data-k="pr4"></b><p data-k="pr4p"></p></div></div>
-</div></section>
+    <!-- ==================== ERP HEALTH CHECK ==================== -->
+    <section id="health" class="py-24 bg-brand-blue relative overflow-hidden">
+      <!-- Decoración de fondo -->
+      <div class="absolute right-0 top-0 w-1/2 h-full opacity-20 pointer-events-none" style="background-image: radial-gradient(white 2px, transparent 2px); background-size: 30px 30px;"></div>
+      
+      <div class="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">¿Tu ERP te está costando dinero?</h2>
+          <p class="text-blue-100 text-lg mb-8">El 70% de las implementaciones subutilizan las licencias que pagan. Realizamos un diagnóstico técnico y operativo en 3 semanas para descubrir ineficiencias.</p>
+          <a href="#contact" class="inline-block px-8 py-4 bg-brand-navy text-white font-bold rounded-xl hover:bg-slate-900 transition-all shadow-xl">Solicitar Auditoría (Health Check)</a>
+        </div>
+        <div class="bg-white p-8 rounded-2xl text-brand-navy shadow-2xl">
+          <h3 class="text-2xl font-bold mb-6">Hoja de ruta del Diagnóstico</h3>
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="font-black text-brand-blue/30 text-3xl">01</div>
+              <div><b class="block text-lg">Mapeo de Procesos As-Is</b><p class="text-slate-600 text-sm">Entrevistas con Key Users.</p></div>
+            </div>
+            <div class="flex gap-4">
+              <div class="font-black text-brand-blue/30 text-3xl">02</div>
+              <div><b class="block text-lg">Auditoría de Código y Sistema</b><p class="text-slate-600 text-sm">Análisis de personalizaciones técnicas.</p></div>
+            </div>
+            <div class="flex gap-4">
+              <div class="font-black text-brand-blue/30 text-3xl">03</div>
+              <div><b class="block text-lg">Matriz de Gaps</b><p class="text-slate-600 text-sm">Identificación de cuellos de botella.</p></div>
+            </div>
+            <div class="flex gap-4">
+              <div class="font-black text-brand-blue/30 text-3xl">04</div>
+              <div><b class="block text-lg">Roadmap de Mitigación</b><p class="text-slate-600 text-sm">Plan de acción con ROI estimado.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section class="section insights" id="insights"><div class="container"><div class="kicker" data-k="insK"></div><h2 data-k="insTitle"></h2><div class="insight-grid">
-<article class="insight"><small data-k="in1"></small><h3 data-k="in1t"></h3><p data-k="in1p"></p></article><article class="insight"><small data-k="in2"></small><h3 data-k="in2t"></h3><p data-k="in2p"></p></article><article class="insight"><small data-k="in3"></small><h3 data-k="in3t"></h3><p data-k="in3p"></p></article>
-</div></div></section>
+    <!-- ==================== INDUSTRIES ==================== -->
+    <section id="industries" class="py-24 bg-slate-950">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-12">
+          <p class="text-brand-accent font-semibold tracking-wide uppercase mb-3">Experiencia Sectorial</p>
+          <h2 class="text-4xl font-bold">Hablamos el idioma de tu industria</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="glass-card p-6 rounded-xl text-center font-semibold hover:bg-brand-blue hover:border-transparent transition-all cursor-default">Manufactura</div>
+          <div class="glass-card p-6 rounded-xl text-center font-semibold hover:bg-brand-blue hover:border-transparent transition-all cursor-default">Logística y Supply Chain</div>
+          <div class="glass-card p-6 rounded-xl text-center font-semibold hover:bg-brand-blue hover:border-transparent transition-all cursor-default">Retail & CPG</div>
+          <div class="glass-card p-6 rounded-xl text-center font-semibold hover:bg-brand-blue hover:border-transparent transition-all cursor-default">Servicios Financieros</div>
+          <div class="glass-card p-6 rounded-xl text-center font-semibold hover:bg-brand-blue hover:border-transparent transition-all cursor-default">Healthcare</div>
+          <div class="glass-card p-6 rounded-xl text-center font-semibold hover:bg-brand-blue hover:border-transparent transition-all cursor-default">Agroindustria</div>
+          <div class="glass-card p-6 rounded-xl text-center font-semibold hover:bg-brand-blue hover:border-transparent transition-all cursor-default">Ingeniería y Construcción</div>
+          <div class="glass-card p-6 rounded-xl text-center font-semibold hover:bg-brand-blue hover:border-transparent transition-all cursor-default">Energía y Utilities</div>
+        </div>
+      </div>
+    </section>
 
-<section class="cta-band" id="contact"><div class="container"><h2 data-k="ctaTitle"></h2><p data-k="ctaP"></p>
-<form class="contact-form" onsubmit="return false"><input class="field" data-k-placeholder="name" placeholder="Name"><input class="field" data-k-placeholder="company" placeholder="Company"><input class="field full" data-k-placeholder="email" placeholder="Business email"><textarea class="field textarea full" data-k-placeholder="message" placeholder="Tell us briefly what you need help with"></textarea><button class="btn primary full" type="button" data-k="send"></button></form>
-<div class="form-note" data-k="note"></div></div></section>
-</main>
-<a class="whatsapp-float" id="whatsappLink" href="#contact" aria-label="WhatsApp">
-<svg class="whatsapp-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.5a12.5 12.5 0 0 0-10.7 19L3.8 28l5.7-1.5A12.5 12.5 0 1 0 16 3.5Zm0 22.7a10.1 10.1 0 0 1-5.1-1.4l-.4-.2-3.4.9.9-3.3-.2-.4A10.1 10.1 0 1 1 16 26.2Zm5.6-7.6c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9.1 9.1 0 0 1-1.7-2.1c-.2-.4 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.6s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.1 1.1-1.1 2.7 1.1 3.1 1.3 3.3a12.2 12.2 0 0 0 4.7 4.5c.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4Z" fill="currentColor"/></svg><span id="waText">Chat with SGG</span></a>
-<footer><div class="container"><span data-k="footer"></span><span>© 2026 SGG</span></div></footer>
-<script src="script.js"></script>
-</body></html>
+    <!-- ==================== CONTACT FORM ==================== -->
+    <section id="contact" class="py-24 bg-brand-navy border-t border-white/5 relative">
+      <div class="max-w-3xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-10">
+          <h2 class="text-4xl font-bold mb-4">Iniciemos la conversación</h2>
+          <p class="text-slate-400 text-lg">Déjanos tus datos y un arquitecto de soluciones se pondrá en contacto contigo en menos de 24 horas.</p>
+        </div>
+        
+        <form id="contactForm" class="glass-card p-8 md:p-12 rounded-3xl flex flex-col gap-6 shadow-2xl">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-slate-400 mb-2">Nombre completo</label>
+              <input type="text" name="name" required class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-all">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-slate-400 mb-2">Empresa</label>
+              <input type="text" name="company" class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-all">
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-400 mb-2">Correo corporativo</label>
+            <input type="email" name="email" required class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-all">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-400 mb-2">¿En qué podemos ayudarte?</label>
+            <textarea name="message" required rows="4" class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-all"></textarea>
+          </div>
+          
+          <button type="submit" id="submitBtn" class="w-full bg-brand-blue text-white font-bold py-4 rounded-xl hover:bg-blue-600 transition-colors mt-2 text-lg">
+            Enviar Solicitud
+          </button>
+          
+          <p id="formStatus" class="text-sm text-center hidden mt-2 font-medium"></p>
+          <p class="text-xs text-center text-slate-500 mt-4">Tus datos están protegidos y nunca los compartiremos con terceros.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-slate-950 py-12 border-t border-white/5 text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-2 font-bold text-lg text-white">
+        SGG<span class="text-brand-accent">.</span>
+      </div>
+      <p>© 2026 SGG Consulting. Todos los derechos reservados.</p>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-white transition-colors">Política de Privacidad</a>
+        <a href="#" class="hover:text-white transition-colors">Términos de Servicio</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== WHATSAPP WIDGET ==================== -->
+  <a href="#contact" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform z-50 flex items-center justify-center group" aria-label="Contactar por WhatsApp">
+    <svg class="w-7 h-7" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+      <path d="M16 3.5a12.5 12.5 0 0 0-10.7 19L3.8 28l5.7-1.5A12.5 12.5 0 1 0 16 3.5Zm0 22.7a10.1 10.1 0 0 1-5.1-1.4l-.4-.2-3.4.9.9-3.3-.2-.4A10.1 10.1 0 1 1 16 26.2Zm5.6-7.6c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9.1 9.1 0 0 1-1.7-2.1c-.2-.4 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.5 0-.6s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.1 1.1-1.1 2.7 1.1 3.1 1.3 3.3a12.2 12.2 0 0 0 4.7 4.5c.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4Z"/>
+    </svg>
+    <!-- Tooltip -->
+    <span class="absolute right-full mr-4 bg-white text-slate-800 text-sm px-3 py-1.5 rounded-lg font-medium opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg whitespace-nowrap">
+      Habla con un asesor
+    </span>
+  </a>
+
+  <!-- ==================== SCRIPT (Interacciones) ==================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Manejo del Formulario
+      const form = document.getElementById('contactForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const formStatus = document.getElementById('formStatus');
+
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Procesando...';
+          submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+          
+          // Simulación de envío
+          setTimeout(() => {
+            form.reset();
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Enviar Solicitud';
+            submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+            
+            formStatus.textContent = '¡Gracias! Hemos recibido tu mensaje. Nos comunicaremos pronto.';
+            formStatus.classList.remove('hidden', 'text-red-400');
+            formStatus.classList.add('text-green-400', 'block');
+            
+            setTimeout(() => formStatus.classList.add('hidden'), 5000);
+          }, 1500);
+        });
+      }
+
+      // 2. Transparencia del Header al hacer scroll
+      const header = document.querySelector('header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          header.classList.add('shadow-lg', 'bg-brand-navy/95');
+          header.classList.remove('bg-brand-navy/90');
+        } else {
+          header.classList.remove('shadow-lg', 'bg-brand-navy/95');
+          header.classList.add('bg-brand-navy/90');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
